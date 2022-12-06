@@ -10,10 +10,16 @@ module.exports = {
   overrides: [
   ],
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true
+    },
     sourceType: 'module',
-    project: './tsconfig.json'
+    project: ['./tsconfig.json']
   },
+  parser: 'vue-eslint-parser',
   plugins: [
     'vue'
   ],
@@ -22,5 +28,6 @@ module.exports = {
     defineEmits: 'readonly'
   },
   rules: {
+    'vue/multi-word-component-names': 'off'
   }
 }
