@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
 const axiosInstance = axios.create({
-  baseURL: 'https://shop.fed.lagou.com/api/admin',
+  baseURL: import.meta.env.VITE_BASE_URL,
   // If the request takes longer than `timeout`, the request will be aborted.
   timeout: 1000
 })
