@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text">
     首页 {{$store.state.count}}
   </div>
 </template>
@@ -14,4 +14,8 @@ console.log(store.state)
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.text {
+  color: $color;
+}
+</style>

@@ -4,6 +4,10 @@ import App from './App.vue'
 import router from './router'
 import store, { key } from './store'
 
+// 加载全局样式，全局变量不能加载进来
+import '@/styles/index.scss'
+import '@/styles/variables.scss'
+
 const app = createApp(App)
 
 app.use(router)

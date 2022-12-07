@@ -13,5 +13,19 @@ export default defineConfig({
     alias: {
       '@': path.join(__dirname, 'src')
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData (source, fp) {
+          // All scss files ending with imports.scss
+          // will not re-import additionalData
+          if (fp.endsWith('variables.scss')) return source;
+          
+          // Use additionalData from legacy nuxt scss options
+          return `@import "@/styles/variables.scss"; ${source}`
+        }
+      },
+    }
   }
 })
