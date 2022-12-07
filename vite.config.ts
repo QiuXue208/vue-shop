@@ -21,6 +21,7 @@ export default defineConfig({
           // All scss files ending with imports.scss
           // will not re-import additionalData
           if (fp.endsWith('variables.scss')) return source;
+          if (fp.endsWith('element/index.scss')) return source;
           
           // Use additionalData from legacy nuxt scss options
           return `@import "@/styles/variables.scss"; ${source}`
