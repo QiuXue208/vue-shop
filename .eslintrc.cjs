@@ -28,6 +28,9 @@ module.exports = {
     defineEmits: 'readonly'
   },
   rules: {
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
   }
 }

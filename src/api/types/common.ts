@@ -3,3 +3,9 @@ export interface ILoginInfo {
   id: string
   name: string
 }
+
+export interface IUserInfo {
+  username: string
+  id: string
+  token: string
+}
