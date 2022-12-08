@@ -4,6 +4,7 @@ import { InjectionKey } from 'vue'
 // 为 store state 声明类型
 export interface State {
   count: number
+  isCollapse: boolean
 }
 
 // 定义 injection key
@@ -13,12 +14,16 @@ export const key: InjectionKey<Store<State>> = Symbol('key')
 const store = createStore<State>({
   state () {
     return {
-      count: 0
+      count: 0,
+      isCollapse: false
     }
   },
   mutations: {
     increment (state) {
       state.count++
+    },
+    collapseMenu (state) {
+      state.isCollapse = !state.isCollapse
     }
   }
 })

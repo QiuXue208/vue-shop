@@ -20,9 +20,7 @@ import { onMounted } from 'vue';
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
 const store = useStore()
-console.log(store.state.count)
 store.commit('increment')
-console.log(store.state)
 
 const value1 = new Date()
 
